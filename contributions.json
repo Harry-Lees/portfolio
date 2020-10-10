@@ -1,0 +1,17 @@
+{
+    "projects" : [{
+        "title"         : "Spotify Playlist Generator",
+        "description"   : "A Spotify playlist generator created with Python Flask to recommend playlists to you!",
+        "source_url"    : "https://github.com/AcrobaticPanicc/Spotify-Playlist-Generator1",
+        "demo_url"      : "https://spotify-playlist-generator1.herokuapp.com/",
+        "image_url"     : "static/images/image.jpg"
+    },
+    {
+        "title"         : "Gifsync",
+        "description"   : "A web application for syncing the speed of gifs with music from Spotify",
+        "source_url"    : "https://github.com/Septem151/gifsync",
+        "demo_url"      : "https://gifsync.herokuapp.com/home",
+        "image_url"     : "static/images/gifsync_logo.png"
+    }
+    ]
+}
