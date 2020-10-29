@@ -4,7 +4,7 @@
         "description"   : "A Spotify playlist generator created with Python Flask to recommend playlists to you!",
         "source_url"    : "https://github.com/AcrobaticPanicc/Spotify-Playlist-Generator1",
         "demo_url"      : "https://spotify-playlist-generator1.herokuapp.com/",
-        "image_url"     : "static/images/image.jpg"
+        "image_url"     : "static/images/spotify-playlist-generator.png"
     },
     {
         "title"         : "Gifsync",

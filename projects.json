@@ -11,14 +11,14 @@
         "description"   : "An online multiplayer Asteroids game designed with p5.js and a Flask server.",
         "source_url"    : "https://github.com/Harry-Lees/Aston_CS1OOP/tree/master/asteroids-online",
         "demo_url"      : "/demos/asteroids_online",
-        "image_url"     : "static/images/image.jpg"
+        "image_url"     : "static/images/asteroids-online.png"
     },
     {
         "title"         : "Boids Online",
         "description"   : "An online Boids simulation created in p5.js.",
         "source_url"    : "https://github.com/Harry-Lees/Aston_CS1OOP/tree/master/boids-online",
         "demo_url"      : "/demos/boids_online",
-        "image_url"     : "static/images/image.jpg"
+        "image_url"     : "static/images/boids.png"
     },
     {
         "title"         : "Portfolio",
