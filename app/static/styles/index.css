@@ -1,0 +1,155 @@
+/* fira-code-regular - latin */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+    url('fonts/FiraCode-Regular.ttf') format('ttf');
+}
+/* fira-code-500 - latin */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local(''),
+    url('fonts/FiraCode-Medium.ttf') format('ttf');
+}
+/* fira-code-600 - latin */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''),
+    url('fonts/FiraCode-SemiBold.ttf') format('ttf');
+}
+/* fira-code-700 - latin */
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''),
+    url('fonts/FiraCode-Bold') format('ttf'),
+}
+:root {
+    --color: #DF0505;
+}
+
+* {
+    font-size: 13px;
+    line-height: 1.75;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #111;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    font-weight: 500;
+    margin-top: 75px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--color);
+}
+
+em {
+    color: #777;
+}
+
+strong {
+    font-weight: 600;
+}
+
+body {
+    width: 550px;
+    font-family: 'Fira Code', monospace;
+    color: #333;
+    margin: 50px auto;
+}
+
+@media all and (max-width: 600px) {
+    body {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+}
+
+/** POSTS */
+.posts {
+    list-style: none;
+}
+
+.posts li {
+    display: flow-root;
+    margin-bottom: 25px;
+}
+
+.posts li:last-child {
+    margin-bottom: 0;
+}
+
+.posts li h3 {
+    float: left;
+    width: calc(100% - 125px);
+}
+
+.posts li .date {
+    float: right;
+    width: 125px;
+    color: #bbb;
+    text-align: right;
+    vertical-align: top;
+}
+
+/** POST */
+.post {
+    margin-top: 20px;
+}
+
+.post h1 {
+    margin-bottom: 0;
+}
+
+.post .date {
+    color: #bbb;
+}
+
+.post .entry {
+    margin-top: 20px;
+}
+
+.post .entry p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post .entry h2,
+.post .entry h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.description {
+    padding-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+    color: lightgrey;
+}

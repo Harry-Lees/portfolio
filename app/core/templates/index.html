@@ -1,127 +1,68 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
-
+    <meta name="viewport" content="width=device-width" />
     <title>Harry Lees Portfolio</title>
+    <link rel="stylesheet" href='{{ url_for("static", filename="styles/index.css") }}'>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
-    <!-- Font awsome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  </head>
+<body>
 
-  <body>
-
-    <header>
-      <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container d-flex justify-content-between">
-          <a href="#" class="navbar-brand d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-            <strong>Portfolio</strong>
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main role="main">
-
-    <!-- Header Section -->
-    <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Hey There!</h1>
-          <p class="lead text-muted">
-              I'm Harry, a first year Computer Science student at Aston Univerty, Birmingham.
-          </p>
+        <h1>Hey There!</h1>
         <p>
-            <a href = 'https://github.com/Harry-Lees'><i class="fab fa-github mr-2 lead text-muted"></i></a>
-            <a href = 'https://www.linkedin.com/in/harry-lees-1738841b1/'><i class="fab fa-linkedin mr-2 lead text-muted"></i></a>
-            <a href = 'mailto:harry.lees@gmail.com'><i class="fas fa-envelope lead text-muted"></i></a>
+            I'm Harry, a 19yr old Computer Science student at Aston University, Birmingham. Welcome to my portfolio! This site hosts all of the projects I'm most proud of. 
+            You can find all of the code for these projects on Github or by clicking the links.
+            <br>
+            <br>
+
+            I'm currently working at RL Automotive as a Software Developer, you can contact me through <a href='https://www.linkedin.com/in/harry-lees-1738841b1/'>LinkedIn</a>, or by sending me an <a href='mailto: harry.lees@gmail.com'>email</a>.
         </p>
-        </div>
-    </section>
 
-      <!-- Project Cards -->
-      <div class="album py-5 bg-light">
-        <div class="container">
+        <h2>Projects</h2>
 
-          <h2 class = 'jumbotron-heading'>My Projects</h2>
-          <p class = 'text-muted'>Here are some projects I created from the ground up.</p>
-          <hr>
-          
-          <div class="row card-deck">
-          {% for project in projects %}
-              <div class="col-md-4 py-2">
-                <div class="card mb-4 box-shadow h-100">
-                  <img class="card-img-top" src="{{ project['image_url'] }}" alt="Card image cap" style = 'height: 50%; object-fit: cover'>
-                  <div class="card-body">
-                    <h5>{{ project['title'] }}</h5>
-                    <p class="card-text">{{ project['description'] }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick = 'window.location.href="{{ project['demo_url'] }}"'>Demo</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick = 'window.location.href="{{ project['source_url'] }}"'>Source Code</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          {% endfor %}
-          </div>
+        <ul class="posts">
+            <li>
+                <h3><a href='https://github.com/Digital-Signage-Slideshow/DS_Slideshow'>DS Slideshow</a></h3>
+                <!-- <div class="date">2021-01-01</div> -->
+                <br>
+                <p class='description'>
+                    A lightweight Python based Digital Signage solution. 
+                    This project was based around the simplicity, allowing a user to setup a Raspberry Pi (or similar) anywhere and have
+                    a professional looking digital signage solution within minutes.
+                </p>
+            </li>
 
-        </div>
-        <br>
-        <div class = 'container'>
+            <li>
+                <h3><a href=''>Aston Unofficial Bot</a></h3>
+                <!-- <div class="date">2021-01-01</div> -->
+                <br>
+                <p class='description'>
+                    A Discord bot bespokely made for the Aston university computer science Discord channel. 
+                    This bot verifies users on the Discord server ensuring they have a valid aston.ac.uk email address before entering.
+                    This bot supports many more custom features for the admins on the server which currently has over 400 members.
+                </p>
+            </li>
 
-          <h2 class = 'jumbotron-heading'>My Contributions</h2>
-          <p class = 'text-muted'>Here are some projects that I have contributed code to on Github.</p>
-          <hr>
-          
-          <div class="row card-deck">
-          {% for contribution in contributions %}
-              <div class="col-md-4 py-2">
-                <div class="card mb-4 box-shadow h-75">
-                  <img class="card-img-top" src="{{ contribution['image_url'] }}" alt="Card image cap" style = 'max-height: 50%; object-fit: cover'>
-                  <div class = 'card-body'>
-                    <h5>{{ contribution['title'] }}</h5>
-                    <p class="card-text">{{ contribution['description'] }}</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick = 'window.location.href="{{ contribution['demo_url'] }}"'>Demo</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick = 'window.location.href="{{ contribution['source_url'] }}"'>Source Code</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          {% endfor %}
-          </div>
+            <li>
+                <h3><a href=''>Asteroids Online</a></h3>
+                <div class="date">2021-01-01</div>
+                <p class='description'>
+                    An online multiplayer Asteroids game created using a p5.js fronend with a Python backend.
+                </p>
+            </li>
 
+            <li>
+                <h3><a href='https://github.com/Harry-Lees/Gangplank'>Gangplank</a></h3>
+                <div class="date">2021-01-01</div>
+                <p>
+                    A League of Legends Discord bot for tracking your game statistics.
+                </p>
+            </li>
+        </ul>
 
-        </div>
-      </div>
-
-    </main>
-
-    <footer class="text-muted">
-      <div class="container mt-2">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>Made with <i class="fas fa-heart text-danger"></i> by Harry Lees</p>
-      </div>
-    </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
-  </body>
+        <footer>
+            Thanks to <a href='https://www.askonomm.com/'>Asko Nõmm</a> for allowing me to use his blog theme.
+        </footer>
+</body>
 </html>
