@@ -79,6 +79,7 @@ body {
     font-family: 'Fira Code', monospace;
     color: #333;
     margin: 50px auto;
+    background-color: whitesmoke;
 }
 
 @media all and (max-width: 600px) {
